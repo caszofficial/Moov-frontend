@@ -51,7 +51,7 @@ export const useGetMovies = () => {
 
   useEffect(() => {
     moviesData();
-    moviesFromAPI();
+    // moviesFromAPI();
   }, []);
 
   return { movies, searchInput, setSearchInput, moviesAPI };

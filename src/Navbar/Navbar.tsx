@@ -1,7 +1,16 @@
+import { useNavigate } from "react-router";
+
 const Navbar = ({ value, onChange }) => {
+  const navigate = useNavigate();
   return (
-    <div className=" z-1 bg-indigo-500 h-15 flex justify-between px-10 items-center">
+    <div className=" bg-indigo-500 h-15 flex justify-between px-10 items-center">
       <h1 className="text-2xl text-center text-white">API MOVIES</h1>
+      <button
+        className=" bg-white p-2 rounded-lg"
+        onClick={() => navigate("/create")}
+      >
+        Create
+      </button>
       <input
         type="text"
         placeholder="Avengers"

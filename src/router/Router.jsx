@@ -1,16 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import App from "../App";
-import Nabvar from "../Navbar/Nabvar";
+import CreateMovie from "../Movies/Create/CreateMovie";
+import Movies from "../Movies/Movies";
 
-const Router = () => {
+const Router = ({ movies, moviesAPI }) => {
   return (
     <>
-      <Nabvar>
-        <Routes>
-          <Route path="/" element={<App />} />
-        </Routes>
-      </Nabvar>
+      <Routes>
+        <Route
+          path="/"
+          element={<Movies movies={movies} moviesAPI={moviesAPI} />}
+        />
+        <Route path="/create" element={<CreateMovie />} />
+      </Routes>
     </>
   );
 };
