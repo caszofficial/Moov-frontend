@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import TextField from "../../components/ui/TextField";
 import Container from "../../components/ui/Container";
 import axios from "axios";
@@ -24,7 +24,7 @@ const CreateMovie = () => {
 
   return (
     <Container title="Create Movie">
-      <div className="grid grid-cols-2 gap-5 px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 px-10">
         <TextField
           value={values.title}
           onChange={(e) => {
@@ -40,6 +40,7 @@ const CreateMovie = () => {
           label="Rating"
         />
         <TextField
+          type="date"
           value={values.releaseDate}
           onChange={(e) => {
             setValues({ ...values, releaseDate: e.target.value });
@@ -49,10 +50,10 @@ const CreateMovie = () => {
       </div>
       <div className="flex justify-center items-center h-20">
         <button
-          className="bg-indigo-500 px-2 w-7/10 py-1 text-xl text-white rounded-lg hover:text-indigo-700 hover:bg-indigo-300 hover:cursor-pointer transition duration-300"
+          className="bg-indigo-500 px-2 w-7/10 py-1 text-xl text-white rounded-lg font-extralight hover:text-indigo-700 hover:bg-indigo-300 hover:cursor-pointer transition duration-300"
           onClick={handleClick}
         >
-          Create
+          Create Moovie
         </button>
       </div>
     </Container>
