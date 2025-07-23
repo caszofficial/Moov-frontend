@@ -46,8 +46,8 @@ const MovieDetails = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 content-center justify-items-center py-10">
         <div className=" grid content-center justify-items-center h-[300px] lg:h-[500px] w-fit mx-5 lg:mx-0 mb-10 lg:m-0">
           <img
-            src="https://m.media-amazon.com/images/S/pv-target-images/a9d31d636887740986efb364d5194136199eb65c7bbaef157b5e1812025c2cd2.jpg"
-            alt=""
+            src={movie.imageUrl}
+            alt="Not Found"
             className="w-full lg:w-[400px] rounded-lg"
           />
         </div>

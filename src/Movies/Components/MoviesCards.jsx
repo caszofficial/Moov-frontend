@@ -29,7 +29,7 @@ const MoviesCards = () => {
           >
             <div className="w-full h-[400px] overflow-hidden rounded-t-lg">
               <img
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                src={movie.imageUrl || null}
                 alt={movie.title || movie.name}
                 className="w-full h-full object-fill"
               />
