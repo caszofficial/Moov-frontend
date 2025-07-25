@@ -53,6 +53,13 @@ const MovieDetails = () => {
         </div>
         <div className="flex flex-col gap-5 w-6/10">
           <TextField
+            label="Image Url"
+            value={movie.imageUrl}
+            onChange={(e) => {
+              setMovie({ ...movie, imageUrl: e.target.value });
+            }}
+          />
+          <TextField
             value={movie.title}
             label="Title"
             onChange={(e) => {
